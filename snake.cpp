@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 /*
 This is just a basic snake game.
@@ -15,7 +16,7 @@ int x, y, meatx, meaty, score; //This variable is responsible for the position o
 enum eDirection {STOP = 0, RIGHT, UP, DOWN, LEFT};//We might need  the controls to turn the snake in the different directions. Will be using enum
 eDirection dir; //This will hold the direction of the snake.
 void setup(){
-    gameOver = true;
+    gameOver = false;
     dir = STOP; //The direction is set to stop so that the snake will not move until we start moving it.
 
     //On the code below we are centering the snake on starting the game.
