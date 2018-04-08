@@ -15,6 +15,17 @@ enum eDirection {STOP = 0, RIGHT, UP, DOWN, LEFT};//We might need  the controls 
 eDirection dir; //This will hold the direction of the snake.
 void setup(){
     gameOver = true;
+    dir = STOP; //The direction is set to stop so that the snake will not move until we start moving it.
+
+    //On the code below we are centering the snake on starting the game.
+    x = width / 2;
+    y = height / 2;
+
+    /*
+    For the meat it should randomly appear on the map. Here is how I set it up
+    */
+   meatx = rand() % width;
+   meaty = rand() % height;
 }
 void logic(){
 
