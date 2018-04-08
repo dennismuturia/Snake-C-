@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 /*
 This is just a basic snake game.
 Remember snake Xenxia?
@@ -26,6 +27,8 @@ void setup(){
     */
    meatx = rand() % width;
    meaty = rand() % height;
+
+   score = 0;
 }
 void logic(){
 
@@ -34,7 +37,36 @@ void control(){
 
 }
 void draw(){
+    system("clear");//First we will need a clear screen. I used the code line to clear for my linux environment.
+    //If on windows write system("cls")
 
+    //Now to drawing the top wall.
+    for(int i = 0; i < width; i++){
+        std::cout << "#" << '\n';
+        std::cout << endl << '\n';
+    }
+
+    /*
+    In here we will uild the height
+    */
+
+    for(int i = 0; i < height; i++){
+       for(int j = 0; j < width; j++){
+           if(j == 0){
+                cout << "#";   
+           }else{
+               cout << " "; 
+           }
+           if(j == width-1){
+               cout << "#";
+           }
+       }
+    }
+    //Lets do the same for the bottom wall
+    for(int i = 0; i < width; i++){
+        std::cout << "#" << '\n';
+        std::cout << endl << '\n';
+    }
 }
 int main(int argc, char const *argv[])
 {
