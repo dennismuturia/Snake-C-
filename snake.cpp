@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <conio.h>//THis will be used toaccessing the controlls
 using namespace std;
 /*
 This is just a basic snake game.
@@ -57,17 +58,20 @@ void draw(){
                 cout << "#";
            }
                 
-
+            //This piece of code below is supposed to place the snakes head.
             if(i == y && j == x){
                 cout << "O";
             }
-                
+                //This piece of code below is supposed to place the meat position..
             else if (i == meaty && j == meatx)
             {
                 cout << "M";
             }
-            else
+            //This is the space in between the two lengths. 
+            else{
                 cout << " ";
+            }
+          
 
             if(j == width-1)
                 cout << "#"; 
