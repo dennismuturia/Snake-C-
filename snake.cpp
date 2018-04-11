@@ -53,10 +53,21 @@ void draw(){
 
     for(int i = 0; i < height; i++){
        for(int j = 0; j < width; j++){
-           if(j == 0)
+           if(j == 0){
                 cout << "#";
+           }
+                
 
-               cout << " ";
+            if(i == y && j == x){
+                cout << "O";
+            }
+                
+            else if (i == meaty && j == meatx)
+            {
+                cout << "M";
+            }
+            else
+                cout << " ";
 
             if(j == width-1)
                 cout << "#"; 
