@@ -42,32 +42,33 @@ void draw(){
     //If on windows write system("cls")
 
     //Now to drawing the top wall.
-    for(int i = 0; i < width; i++){
-        std::cout << "#" << '\n';
-        std::cout << endl << '\n';
+    for(int i = 0; i < width+2; i++){
+        cout << "#";
+        
     }
-
+    cout << endl;
     /*
-    In here we will uild the height
+    In here we will build the height
     */
 
     for(int i = 0; i < height; i++){
        for(int j = 0; j < width; j++){
-           if(j == 0){
-                cout << "#";   
-           }else{
-               cout << " "; 
+           if(j == 0)
+                cout << "#";
+
+               cout << " ";
+
+            if(j == width-1)
+                cout << "#"; 
            }
-           if(j == width-1){
-               cout << "#";
-           }
+           cout << endl;
        }
-    }
     //Lets do the same for the bottom wall
-    for(int i = 0; i < width; i++){
-        std::cout << "#" << '\n';
-        std::cout << endl << '\n';
+    for(int i = 0; i < width+2; i++){
+        cout << "#" ;
+        
     }
+    cout << endl;
 }
 int main(int argc, char const *argv[])
 {
