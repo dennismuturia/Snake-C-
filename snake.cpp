@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include <conio.h>//THis will be used toaccessing the controlls
+#include <conio.h>//We will use this to make the snake move around or make the text move the space 
 using namespace std;
 /*
 This is just a basic snake game.
